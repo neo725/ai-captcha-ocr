@@ -1,0 +1,163 @@
+:root {
+  color-scheme: light;
+  --ink: #181713;
+  --muted: #68604d;
+  --paper: #fbf7ea;
+  --line: #d8caa4;
+  --accent: #e5b41f;
+  --accent-strong: #171717;
+  --field: #fffdf5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 360px;
+  min-height: 460px;
+  margin: 0;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Cambria, Georgia, "Times New Roman", serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font: 700 11px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-top: 4px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.settings-form {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--field);
+  color: var(--ink);
+  outline: none;
+}
+
+.field input {
+  height: 36px;
+  padding: 0 10px;
+}
+
+.field textarea {
+  min-height: 138px;
+  resize: vertical;
+  padding: 10px;
+  line-height: 1.42;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 2px rgb(229 180 31 / 36%);
+}
+
+.primary-button {
+  height: 38px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-strong);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--accent-strong);
+}
+
+.primary-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--accent-strong);
+}
+
+.usage {
+  display: grid;
+  gap: 6px;
+  padding-top: 2px;
+  color: var(--muted);
+}
+
+.usage p {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.message {
+  min-height: 20px;
+  color: #1f6f43;
+  font: 700 13px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.message.is-visible {
+  opacity: 1;
+}

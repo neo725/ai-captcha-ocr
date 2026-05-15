@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Captcha OCR</title>
+    <script type="module" src="./main.ts"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Internal OCR</p>
+          <h1>AI Captcha OCR</h1>
+        </div>
+        <span class="status-dot" aria-hidden="true"></span>
+      </header>
+
+      <form id="settings-form" class="settings-form">
+        <label class="field">
+          <span>Prompt</span>
+          <textarea id="prompt" name="prompt" rows="8"></textarea>
+        </label>
+
+        <button class="primary-button" type="submit">儲存設定</button>
+      </form>
+
+      <section class="usage">
+        <h2>使用方式</h2>
+        <p>頁面中的疑似 CAPTCHA 圖片會出現 OCR 按鈕，也可以在圖片上按右鍵選擇 AI OCR this image。OpenAI API 設定請寫在本機 .env。</p>
+      </section>
+
+      <p id="message" class="message" role="status"></p>
+    </main>
+  </body>
+</html>
