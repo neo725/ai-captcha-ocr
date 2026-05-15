@@ -6,6 +6,25 @@ This local-only prototype calls either the OpenAI Responses API or the Gemini AP
 
 > Warning: environment variables used by the extension build can be inspected from the built extension. Do not share the build output if it contains your API key.
 
+## Demo
+
+1. 啟用 Extension 後，畫面左上角會顯示 **顯示 AI OCR**。
+
+   ![啟用 Extension 後顯示 AI OCR](screenshots/PHgSYD0n3f.png)
+
+2. 點選 **顯示 AI OCR** 後，可以在 Captcha image 左下角找到 OCR 小按鈕。
+
+   ![Captcha image 左下角的 OCR 小按鈕](screenshots/VRGsrtFHW2.png)
+
+3. 解析後的文字會自動放入文字方塊中。
+
+   ![解析後的文字放入文字方塊](screenshots/0ZBGhkvprT.png)
+
+4. 或者，也可以在 Captcha image 上按滑鼠右鍵，選擇 **AI OCR the image**。
+
+   ![右鍵選單顯示 AI OCR the image](screenshots/w1xkCkoSFW.png)
+
+
 ## Development
 
 ```bash
